@@ -1,0 +1,3 @@
+[submodule "introvisual-editor"]
+	path = introvisual-editor
+	url = git@github.com:Introceptibles/introvisual-editor.git
