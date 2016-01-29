@@ -1,3 +1,6 @@
 [submodule "introvisual-editor"]
 	path = introvisual-editor
 	url = git@github.com:Introceptibles/introvisual-editor.git
+[submodule "supatches/plugins/lsl"]
+	path = supatches/plugins/lsl
+	url = git@github.com:RenaudGervais/vvvv.lsl.git
