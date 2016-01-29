@@ -73,10 +73,10 @@
    </BOUNDS>
    <BOUNDS type="Window" left="13725" top="7485" width="11160" height="9015">
    </BOUNDS>
-   <PIN pinname="Layer 2 - Layers" slicecount="1" values="||" visible="1">
+   <PIN pinname="Layer 2 - Layers" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="Animation" filename="supatches\Animation.v4p" nodename="supatches\Animation.v4p" componentmode="Hidden" id="52">
+   <NODE systemname="CONTENT" filename="supatches\CONTENT.v4p" nodename="supatches\CONTENT.v4p" componentmode="Hidden" id="52">
    <BOUNDS type="Node" left="1770" top="6345" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
