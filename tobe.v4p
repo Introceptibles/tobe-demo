@@ -68,7 +68,7 @@
    </LINK>
    <LINK srcnodeid="48" srcpinname="Output" dstnodeid="47" dstpinname="Input">
    </LINK>
-   <NODE systemname="CONTENT" filename="supatches\CONTENT.v4p" nodename="supatches\CONTENT.v4p" componentmode="Hidden" id="52">
+   <NODE systemname="CONTENT" filename="supatches\CONTENT.v4p" nodename="supatches\CONTENT.v4p" componentmode="InAWindow" id="52">
    <BOUNDS type="Node" left="1770" top="6345" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
@@ -77,10 +77,14 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <BOUNDS type="Window" left="4335" top="6780" width="20160" height="10140">
+   </BOUNDS>
+   <PIN pinname="Physio Signals" visible="1">
+   </PIN>
+   <PIN pinname="Texture Animation" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Tex" dstnodeid="52" dstpinname="Texture">
-   </LINK>
-   <LINK srcnodeid="38" srcpinname="Transform Out" dstnodeid="52" dstpinname="Texture Transform">
    </LINK>
    <NODE systemname="RENDER" filename="supatches\RENDER.v4p" nodename="supatches\RENDER.v4p" componentmode="Hidden" id="51">
    <BOUNDS type="Node" left="1789" top="10608" width="0" height="0">
@@ -91,15 +95,23 @@
    </BOUNDS>
    <PIN pinname="Layer 2 - Layers" slicecount="1" visible="1" values="||">
    </PIN>
+   <PIN pinname="Read" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="52" srcpinname="Layer" dstnodeid="51" dstpinname="Layer 2 - Layers">
    </LINK>
-   <NODE systemname="SIGNALS" filename="supatches\SIGNALS.v4p" componentmode="Hidden" id="54" nodename="supatches\SIGNALS.v4p">
+   <NODE systemname="SIGNALS" filename="supatches\SIGNALS.v4p" componentmode="InAWindow" id="54" nodename="supatches\SIGNALS.v4p">
    <BOUNDS type="Node" left="6090" top="3525" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="6090" top="3525" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="9210" top="0" width="10260" height="14415">
    </BOUNDS>
+   <PIN pinname="Physio Signals" visible="1">
+   </PIN>
    </NODE>
+   <LINK srcnodeid="54" srcpinname="Physio Signals" dstnodeid="52" dstpinname="Physio Signals">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="52" dstpinname="Texture Animation">
+   </LINK>
    </PATCH>

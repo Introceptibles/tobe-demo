@@ -268,4 +268,92 @@
    </LINK>
    <LINK srcnodeid="11" srcpinname="Up Edge" dstnodeid="13" dstpinname="ECG">
    </LINK>
+   <NODE systemname="CreateEnum (Enumerations)" filename="" nodename="CreateEnum (Enumerations)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="3420" top="12420" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum Name" slicecount="1" values="PhysioSignalsType">
+   </PIN>
+   <PIN pinname="Strings" visible="1" slicecount="10" values="eyeBlink,eyePos,ECG,breathing,arousal,attention,workload,valence,relaxation,EMG">
+   </PIN>
+   </NODE>
+   <NODE systemname="Separate (String)" filename="" nodename="Separate (String)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="2730" top="9315" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Space">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output String" dstnodeid="21" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="900" y="10755">
+   </LINKPOINT>
+   <LINKPOINT x="15" y="9210">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="22">
+   <BOUNDS type="Node" left="3405" top="9750" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="23" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3885" top="8970" width="375" height="555">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3885" top="8970" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="22" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="22" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="2790" y="9653">
+   </LINKPOINT>
+   <LINKPOINT x="3405" y="9653">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="24" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3420" top="10155" width="1290" height="2025">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3420" top="10155" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="24" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Output String" dstnodeid="19" dstpinname="Strings">
+   </LINK>
    </PATCH>
