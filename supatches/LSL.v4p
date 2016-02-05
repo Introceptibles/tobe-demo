@@ -2,116 +2,10 @@
    <PATCH nodename="C:\vvvv\projects\tobe-demo\supatches\LSL.v4p" systemname="LSL" filename="C:\vvvv\projects\meegi\subpatches\LSL.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="12600" top="10365" width="9000" height="6000">
    </BOUNDS>
-   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="765" top="2970" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Bin Size" visible="1" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="765" top="3405" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="5" dstpinname="Input">
-   </LINK>
-   <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="1650" top="3495" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="1665" top="2955" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="4" dstpinname="Input 1">
-   </LINK>
-   <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="780" top="3900" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Set" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="2" dstpinname="Set">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="2" dstpinname="Input">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="0" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="660" top="4830" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="660" top="4830" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
-   </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <PACK Name="image" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2175" top="4770" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2175" top="4770" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Last value|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="14" dstpinname="Y Input Value">
-   </LINK>
-   <NODE systemname="Queue (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Queue (Spreads)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="2415" top="3840" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Insert" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Frame Count" slicecount="1" values="500">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="19" dstpinname="Insert">
-   </LINK>
-   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="2295" top="4260" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="20" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="0" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="LSLReceiveData (Value)" filename="plugins\lsl\bin\lsl.dll" nodename="LSLReceiveData (Value)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="630" top="1545" width="6375" height="270">
    </BOUNDS>
@@ -128,6 +22,12 @@
    <PIN pinname="Stream name 1" visible="1">
    </PIN>
    <PIN pinname="Stream name 2" visible="1">
+   </PIN>
+   <PIN pinname="Last received 0" visible="1">
+   </PIN>
+   <PIN pinname="Last received 1" visible="1">
+   </PIN>
+   <PIN pinname="Last received 2" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="22">
@@ -233,5 +133,41 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="27" srcpinname="Output String" dstnodeid="21" dstpinname="Stream name 2">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="28">
+   <BOUNDS type="Node" left="810" top="4470" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="810" top="4470" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="ecg">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="29">
+   <BOUNDS type="Node" left="3180" top="4470" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3180" top="4470" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="breathing">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="30">
+   <BOUNDS type="Node" left="5460" top="4470" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5460" top="4470" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="relax">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Last received 0" dstnodeid="28" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Last received 1" dstnodeid="29" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Last received 2" dstnodeid="30" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
