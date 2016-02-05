@@ -1,0 +1,307 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\vvvv\projects\tobe-demo\supatches\CardiacCoherenceIntrovisual.v4p" systemname="CardiacCoherenceIntrovisual" filename="C:\vvvv\projects\tobe-demo\supatches\CardiacCoherenceIntrovisual.v4p">
+   <BOUNDS type="Window" left="3270" top="3525" width="19395" height="11595">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="0">
+   <BOUNDS type="Node" left="1080" top="600" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1080" top="600" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Physio Signals|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="eye-meditation" filename="..\introvisual\sprites\eye-meditation.v4p" nodename="..\introvisual\sprites\eye-meditation.v4p" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="2265" top="4245" width="1605" height="270">
+   </BOUNDS>
+   <PIN pinname="Breathing" visible="1">
+   </PIN>
+   <PIN pinname="Breathing Guide" visible="1">
+   </PIN>
+   <PIN pinname="Synchronicity" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="2265" top="4245">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Split (Message Formular)" filename="%VVVV%\packs\message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Split (Message Formular)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1065" top="1245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Message Formular" slicecount="1" values="|Physio Signals|">
+   </PIN>
+   <PIN pinname="Configuration" slicecount="1" values="|bool eyeBlink, Vector2d eyePos, float ECG, float[2] breathing, float arousal, float attention, float workload, float valence, float relaxation, float EMG|">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="breathing" visible="1">
+   </PIN>
+   <PIN pinname="relaxation" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output Node" dstnodeid="2" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="2280" top="1875" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="breathing" dstnodeid="3" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Y" dstnodeid="1" dstpinname="Breathing">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="X" dstnodeid="1" dstpinname="Breathing Guide">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="relaxation" dstnodeid="1" dstpinname="Synchronicity" linkstyle="Bezier">
+   <LINKPOINT x="3855" y="2865">
+   </LINKPOINT>
+   <LINKPOINT x="3330" y="2865">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="2220" top="6225" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Layer Out" dstnodeid="4" dstpinname="Layer 1" linkstyle="VHV">
+   <LINKPOINT x="3795" y="5363">
+   </LINKPOINT>
+   <LINKPOINT x="2445" y="5363">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="breathing-homographies" filename="..\introvisual\sprites\breathing-homographies.v4p" nodename="..\introvisual\sprites\breathing-homographies.v4p" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="6255" top="2970" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Helper Layer" visible="1">
+   </PIN>
+   <PIN pinname="Enable Helper" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="breathing-meditation" filename="..\introvisual\sprites\breathing-meditation.v4p" nodename="..\introvisual\sprites\breathing-meditation.v4p" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="6255" top="4245" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9960" top="4950" width="14175" height="12075">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Breathing" visible="1">
+   </PIN>
+   <PIN pinname="Breathing Guide" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="6255" top="4245">
+   </BOUNDS>
+   <PIN pinname="Display Guide" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Transform" dstnodeid="8" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Y" dstnodeid="8" dstpinname="Breathing" linkstyle="VHV">
+   <LINKPOINT x="2820" y="3900">
+   </LINKPOINT>
+   <LINKPOINT x="6600" y="3900">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="X" dstnodeid="8" dstpinname="Breathing Guide" linkstyle="VHV">
+   <LINKPOINT x="2310" y="3675">
+   </LINKPOINT>
+   <LINKPOINT x="7530" y="3675">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Layer Out" dstnodeid="4" dstpinname="Layer 2" linkstyle="VHV">
+   <LINKPOINT x="6285" y="5520">
+   </LINKPOINT>
+   <LINKPOINT x="2580" y="5520">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="meditation-lilyflower" filename="..\introvisual\sprites\meditation-lilyflower.v4p" nodename="..\introvisual\sprites\meditation-lilyflower.v4p" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="9870" top="4245" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10500" top="5100" width="14820" height="10755">
+   </BOUNDS>
+   <PIN pinname="Synchronicity" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="9870" top="4245">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="relaxation" dstnodeid="9" dstpinname="Synchronicity" linkstyle="Bezier">
+   <LINKPOINT x="3900" y="2865">
+   </LINKPOINT>
+   <LINKPOINT x="9870" y="2865">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Layer Out" dstnodeid="4" dstpinname="Layer 3" linkstyle="VHV">
+   <LINKPOINT x="9900" y="5760">
+   </LINKPOINT>
+   <LINKPOINT x="2760" y="5760">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="10" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2205" top="7275" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2205" top="7275" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Layer Out" dstnodeid="10" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="10365" top="3585" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1">
+   </PIN>
+   <PIN pinname="ScaleY" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="0.58">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="-0.123">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Transform Out" dstnodeid="9" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="3810" top="3270" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="-0.12">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="0.36">
+   </PIN>
+   <PIN pinname="ScaleY" visible="1">
+   </PIN>
+   <PIN pinname="Rotate" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10860" top="2985" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10860" top="2985" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.13">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="11" dstpinname="ScaleX" linkstyle="VHV">
+   <LINKPOINT x="10885" y="3398">
+   </LINKPOINT>
+   <LINKPOINT x="10880" y="3398">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="11" dstpinname="ScaleY" linkstyle="VHV">
+   <LINKPOINT x="10900" y="3390">
+   </LINKPOINT>
+   <LINKPOINT x="11030" y="3390">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4305" top="2610" width="765" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4305" top="2610" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.3">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="12" dstpinname="ScaleY" linkstyle="VHV">
+   <LINKPOINT x="4335" y="3045">
+   </LINKPOINT>
+   <LINKPOINT x="4470" y="3045">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="12" dstpinname="ScaleX" linkstyle="VHV">
+   <LINKPOINT x="4335" y="3060">
+   </LINKPOINT>
+   <LINKPOINT x="4335" y="3060">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Helper Layer" dstnodeid="4" dstpinname="Layer 4" linkstyle="VHV">
+   <LINKPOINT x="8085" y="6045">
+   </LINKPOINT>
+   <LINKPOINT x="2925" y="6045">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8055" top="2205" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8055" top="2205" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Enable Helper">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7815" top="630" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7815" top="630" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Display Guide|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Display Guide">
+   </LINK>
+   </PATCH>
