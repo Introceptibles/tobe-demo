@@ -153,9 +153,11 @@
    </PIN>
    <PIN pinname="attention" slicecount="1" values="0.5">
    </PIN>
-   <PIN pinname="relaxation" slicecount="1" values="1">
+   <PIN pinname="relaxation" slicecount="1" values="0">
    </PIN>
    <PIN pinname="ECG" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="breathing" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="15">

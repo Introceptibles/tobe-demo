@@ -5,7 +5,7 @@
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Receiver" filename="introvisual-editor\Receiver.v4p" nodename="introvisual-editor\Receiver.v4p" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="2685" top="1110" width="3945" height="270">
+   <BOUNDS type="Node" left="2355" top="1035" width="3945" height="270">
    </BOUNDS>
    <PIN pinname="Tex" visible="1">
    </PIN>
@@ -14,7 +14,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Introvisual-Editor">
    </PIN>
    </NODE>
-   <NODE systemname="CONTENT" filename="supatches\CONTENT.v4p" nodename="supatches\CONTENT.v4p" componentmode="InAWindow" id="52">
+   <NODE systemname="CONTENT" filename="supatches\CONTENT.v4p" nodename="supatches\CONTENT.v4p" componentmode="Hidden" id="52">
    <BOUNDS type="Node" left="1770" top="6345" width="3900" height="270">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
@@ -23,19 +23,21 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="6705" top="1155" width="20160" height="10140">
+   <BOUNDS type="Window" left="900" top="2625" width="20160" height="10140">
    </BOUNDS>
    <PIN pinname="Physio Signals" visible="1">
    </PIN>
    <PIN pinname="Texture Animation" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Use Editor Source" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Tex" dstnodeid="52" dstpinname="Texture">
+   <LINK srcnodeid="0" srcpinname="Tex" dstnodeid="52" dstpinname="Custom Texture">
    </LINK>
    <NODE systemname="RENDER" filename="supatches\RENDER.v4p" nodename="supatches\RENDER.v4p" componentmode="Hidden" id="51">
-   <BOUNDS type="Node" left="1789" top="10608" width="0" height="0">
+   <BOUNDS type="Node" left="1759" top="7548" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="0" top="6096" width="11170" height="9025">
+   <BOUNDS type="Box" left="0" top="3036" width="11170" height="9025">
    </BOUNDS>
    <BOUNDS type="Window" left="13725" top="7485" width="11160" height="9015">
    </BOUNDS>
@@ -46,7 +48,7 @@
    </NODE>
    <LINK srcnodeid="52" srcpinname="Layer" dstnodeid="51" dstpinname="Layer 2 - Layers">
    </LINK>
-   <NODE systemname="SIGNALS" filename="supatches\SIGNALS.v4p" componentmode="InAWindow" id="54" nodename="supatches\SIGNALS.v4p">
+   <NODE systemname="SIGNALS" filename="supatches\SIGNALS.v4p" componentmode="Hidden" id="54" nodename="supatches\SIGNALS.v4p">
    <BOUNDS type="Node" left="5610" top="4920" width="3120" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="5610" top="4920" width="4800" height="3600">
@@ -62,7 +64,11 @@
    <PIN pinname="Current player" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="54" srcpinname="Physio Signals" dstnodeid="52" dstpinname="Physio Signals">
+   <LINK srcnodeid="54" srcpinname="Physio Signals" dstnodeid="52" dstpinname="Physio Signals" linkstyle="Bezier">
+   <LINKPOINT x="5610" y="5753">
+   </LINKPOINT>
+   <LINKPOINT x="3105" y="5753">
+   </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="55" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="5610" top="3465" width="480" height="480">
@@ -124,6 +130,30 @@
    </NODE>
    <LINK srcnodeid="57" srcpinname="Output Enum" dstnodeid="54" dstpinname="Current player">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="Animation Transforms" dstnodeid="52" dstpinname="Texture Animation">
+   <LINK srcnodeid="0" srcpinname="Animation Transforms" dstnodeid="52" dstpinname="Custom Texture Animation" linkstyle="Bezier">
+   <LINKPOINT x="2415" y="3825">
+   </LINKPOINT>
+   <LINKPOINT x="5610" y="3825">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="58" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2415" top="4905" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2415" top="4905" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Use Editor Source|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="52" dstpinname="Use Editor Source">
    </LINK>
    </PATCH>
