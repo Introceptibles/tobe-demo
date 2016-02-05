@@ -14,60 +14,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Introvisual-Editor">
    </PIN>
    </NODE>
-   <NODE systemname="Inverse (Transform)" nodename="Inverse (Transform)" componentmode="Hidden" id="38">
-   <BOUNDS type="Node" left="1170" top="2595" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Source" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="40">
-   <BOUNDS type="Node" left="735" top="975" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Period" slicecount="1" values="4.43">
-   </PIN>
-   </NODE>
-   <NODE systemname="WaveShaper (Value)" nodename="WaveShaper (Value)" componentmode="Hidden" id="41">
-   <BOUNDS type="Node" left="750" top="1590" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Shape" slicecount="1" values="Triangle">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="40" srcpinname="Output" dstnodeid="41" dstpinname="Input">
-   </LINK>
-   <NODE systemname="InputMorph (Transform Spectral)" filename="supatches\plugins\SpectralInputMorph\SpectralInputMorph.csproj" nodename="InputMorph (Transform Spectral)" componentmode="Hidden" id="47">
-   <BOUNDS type="Node" left="1695" top="2145" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Switch" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="41" srcpinname="Output" dstnodeid="47" dstpinname="Switch">
-   </LINK>
-   <LINK srcnodeid="47" srcpinname="Output" dstnodeid="38" dstpinname="Source">
-   </LINK>
-   <NODE systemname="AvoidNIL (Node)" filename="%VVVV%\lib\nodes\modules\Node\AvoidNIL (Node).v4p" nodename="AvoidNIL (Node)" componentmode="Hidden" id="48">
-   <BOUNDS type="Node" left="2685" top="1725" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="0" srcpinname="Animation Transforms" dstnodeid="48" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="47" dstpinname="Input">
-   </LINK>
    <NODE systemname="CONTENT" filename="supatches\CONTENT.v4p" nodename="supatches\CONTENT.v4p" componentmode="InAWindow" id="52">
    <BOUNDS type="Node" left="1770" top="6345" width="3900" height="270">
    </BOUNDS>
@@ -100,7 +46,7 @@
    </NODE>
    <LINK srcnodeid="52" srcpinname="Layer" dstnodeid="51" dstpinname="Layer 2 - Layers">
    </LINK>
-   <NODE systemname="SIGNALS" filename="supatches\SIGNALS.v4p" componentmode="Hidden" id="54" nodename="supatches\SIGNALS.v4p">
+   <NODE systemname="SIGNALS" filename="supatches\SIGNALS.v4p" componentmode="InAWindow" id="54" nodename="supatches\SIGNALS.v4p">
    <BOUNDS type="Node" left="5610" top="4920" width="3120" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="5610" top="4920" width="4800" height="3600">
@@ -118,8 +64,6 @@
    </NODE>
    <LINK srcnodeid="54" srcpinname="Physio Signals" dstnodeid="52" dstpinname="Physio Signals">
    </LINK>
-   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="52" dstpinname="Texture Animation">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="55" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="5610" top="3465" width="480" height="480">
    </BOUNDS>
@@ -136,6 +80,8 @@
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Send Signals|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="54" dstpinname="Send Signals">
@@ -177,5 +123,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="57" srcpinname="Output Enum" dstnodeid="54" dstpinname="Current player">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Animation Transforms" dstnodeid="52" dstpinname="Texture Animation">
    </LINK>
    </PATCH>

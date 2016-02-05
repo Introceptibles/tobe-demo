@@ -167,7 +167,7 @@
    <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="12" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="1770" top="1425" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Receive" slicecount="1" values="(nil)" visible="1">
+   <PIN pinname="Receive" slicecount="1" visible="1" values="(nil)">
    </PIN>
    <PIN pinname="Enum" visible="1" slicecount="1" values="PhysioSignalsType">
    </PIN>
@@ -300,8 +300,6 @@
    </NODE>
    <LINK srcnodeid="16" srcpinname="Output" dstnodeid="17" dstpinname="Source">
    </LINK>
-   <LINK srcnodeid="8" srcpinname="Output Node" dstnodeid="16" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="16" dstpinname="Switch" linkstyle="VHV">
    <LINKPOINT x="1605" y="3923">
    </LINKPOINT>
@@ -313,5 +311,17 @@
    </LINKPOINT>
    <LINKPOINT x="7650" y="5670">
    </LINKPOINT>
+   </LINK>
+   <NODE systemname="AvoidNIL (Node)" filename="%VVVV%\lib\nodes\modules\Node\AvoidNIL (Node).v4p" nodename="AvoidNIL (Node)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="7875" top="3120" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output Node" dstnodeid="18" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="16" dstpinname="Input">
    </LINK>
    </PATCH>

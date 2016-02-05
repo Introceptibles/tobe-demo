@@ -96,7 +96,7 @@
    </NODE>
    <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Update">
    </LINK>
-   <NODE systemname="LSL" filename="LSL.v4p" nodename="LSL.v4p" componentmode="InAWindow" id="7" border="1">
+   <NODE systemname="LSL" filename="LSL.v4p" nodename="LSL.v4p" componentmode="Hidden" id="7" border="1">
    <BOUNDS type="Node" left="3450" top="4125" width="1320" height="270">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
@@ -152,6 +152,10 @@
    <PIN pinname="valence" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="attention" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="relaxation" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="ECG" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="15">
@@ -439,19 +443,13 @@
    <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="36">
    <BOUNDS type="Node" left="4245" top="5415" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="0.141239845124073">
    </PIN>
    <PIN pinname="X" visible="1">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="breathing" dstnodeid="36" dstpinname="Y" linkstyle="Bezier">
-   <LINKPOINT x="4140" y="4898">
-   </LINKPOINT>
-   <LINKPOINT x="4755" y="4898">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="35" srcpinname="Output" dstnodeid="36" dstpinname="X" linkstyle="VHV">
    <LINKPOINT x="1635" y="5220">
    </LINKPOINT>
@@ -459,5 +457,11 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="36" srcpinname="XY" dstnodeid="13" dstpinname="breathing">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="breathing" dstnodeid="36" dstpinname="Y" linkstyle="Bezier">
+   <LINKPOINT x="4140" y="4898">
+   </LINKPOINT>
+   <LINKPOINT x="4755" y="4898">
+   </LINKPOINT>
    </LINK>
    </PATCH>
