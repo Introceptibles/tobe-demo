@@ -206,7 +206,7 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="900" top="2625" width="20160" height="10140">
+   <BOUNDS type="Window" left="900" top="2625" width="17445" height="10140">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>

@@ -5,13 +5,17 @@
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Receiver" filename="introvisual-editor\Receiver.v4p" nodename="introvisual-editor\Receiver.v4p" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="1680" top="4965" width="3945" height="270">
+   <BOUNDS type="Node" left="4935" top="8145" width="3945" height="270">
    </BOUNDS>
    <PIN pinname="Tex" visible="1">
    </PIN>
    <PIN pinname="Animation Transforms" visible="1">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Introvisual-Editor">
+   </PIN>
+   <PIN pinname="Signal" visible="1">
+   </PIN>
+   <PIN pinname="Animator IP Address" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="CONTENT" filename="supatches\CONTENT.v4p" nodename="supatches\CONTENT.v4p" componentmode="Hidden" id="52">
@@ -23,7 +27,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="900" top="2625" width="20160" height="10140">
+   <BOUNDS type="Window" left="900" top="2625" width="17445" height="10140">
    </BOUNDS>
    <PIN pinname="Physio Signals" visible="1">
    </PIN>
@@ -31,8 +35,14 @@
    </PIN>
    <PIN pinname="Use Editor Source" visible="1">
    </PIN>
+   <PIN pinname="Custom Source Signal" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Tex" dstnodeid="52" dstpinname="Custom Texture">
+   <LINK srcnodeid="0" srcpinname="Tex" dstnodeid="52" dstpinname="Custom Texture" linkstyle="VHV">
+   <LINKPOINT x="7530" y="9330">
+   </LINKPOINT>
+   <LINKPOINT x="4350" y="9330">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="RENDER" filename="supatches\RENDER.v4p" nodename="supatches\RENDER.v4p" componentmode="Hidden" id="51">
    <BOUNDS type="Node" left="1084" top="11478" width="0" height="0">
@@ -49,11 +59,11 @@
    <LINK srcnodeid="52" srcpinname="Layer" dstnodeid="51" dstpinname="Layer 2 - Layers">
    </LINK>
    <NODE systemname="SIGNALS" filename="supatches\SIGNALS.v4p" componentmode="Hidden" id="54" nodename="supatches\SIGNALS.v4p">
-   <BOUNDS type="Node" left="4935" top="8850" width="3120" height="270">
+   <BOUNDS type="Node" left="2385" top="6480" width="3405" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="4935" top="8850" width="4800" height="3600">
+   <BOUNDS type="Box" left="2385" top="6480" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="9210" top="0" width="10260" height="14415">
+   <BOUNDS type="Window" left="9210" top="0" width="13470" height="14415">
    </BOUNDS>
    <PIN pinname="Physio Signals" visible="1">
    </PIN>
@@ -63,17 +73,17 @@
    </PIN>
    <PIN pinname="Current player" visible="1">
    </PIN>
+   <PIN pinname="Custom Source Signal" visible="1">
+   </PIN>
+   <PIN pinname="Custom Signal" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="54" srcpinname="Physio Signals" dstnodeid="52" dstpinname="Physio Signals" linkstyle="Bezier">
-   <LINKPOINT x="4935" y="9683">
-   </LINKPOINT>
-   <LINKPOINT x="2430" y="9683">
-   </LINKPOINT>
+   <LINK srcnodeid="54" srcpinname="Physio Signals" dstnodeid="52" dstpinname="Physio Signals" linkstyle="PolyLine">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="55" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4935" top="7395" width="480" height="480">
+   <BOUNDS type="Box" left="2385" top="5025" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4935" top="7395" width="0" height="0">
+   <BOUNDS type="Node" left="2385" top="5025" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -93,9 +103,9 @@
    <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="54" dstpinname="Send Signals">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="56" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6480" top="7665" width="480" height="480">
+   <BOUNDS type="Box" left="3495" top="5295" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="6480" top="7665" width="0" height="0">
+   <BOUNDS type="Node" left="3495" top="5295" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -113,9 +123,9 @@
    <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="54" dstpinname="LSL Enabled">
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="57" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="7980" top="6420" width="885" height="720">
+   <BOUNDS type="Box" left="4635" top="4380" width="885" height="720">
    </BOUNDS>
-   <BOUNDS type="Node" left="7980" top="6420" width="0" height="0">
+   <BOUNDS type="Node" left="4635" top="4380" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="P1">
    </PIN>
@@ -130,11 +140,7 @@
    </NODE>
    <LINK srcnodeid="57" srcpinname="Output Enum" dstnodeid="54" dstpinname="Current player">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="Animation Transforms" dstnodeid="52" dstpinname="Custom Texture Animation" linkstyle="Bezier">
-   <LINKPOINT x="1740" y="7755">
-   </LINKPOINT>
-   <LINKPOINT x="4935" y="7755">
-   </LINKPOINT>
+   <LINK srcnodeid="0" srcpinname="Animation Transforms" dstnodeid="52" dstpinname="Custom Texture Animation" linkstyle="PolyLine">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="58" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1740" top="8835" width="480" height="480">
@@ -217,5 +223,49 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="60" srcpinname="Output" dstnodeid="59" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="63" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="5730" top="1365" width="1155" height="2415">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5730" top="1365" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="breathing">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Custom Source Signal|">
+   </PIN>
+   <PIN pinname="Style" slicecount="1" values="List">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="63" srcpinname="Output Enum" dstnodeid="52" dstpinname="Custom Source Signal" linkstyle="Bezier">
+   <LINKPOINT x="5645" y="7028">
+   </LINKPOINT>
+   <LINKPOINT x="3790" y="7028">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Output Enum" dstnodeid="54" dstpinname="Custom Source Signal">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Custom Signal" dstnodeid="0" dstpinname="Signal">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="64" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6480" top="7230" width="1770" height="285">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6480" top="7230" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="localhost">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="192.168.1.1">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="IP">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Animator IP Address|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="64" srcpinname="Output String" dstnodeid="0" dstpinname="Animator IP Address">
    </LINK>
    </PATCH>
