@@ -1,12 +1,12 @@
 [submodule "introvisual-editor"]
 	path = introvisual-editor
-	url = git@github.com:Introceptibles/introvisual-editor.git 
+	url = https://github.com/Introceptibles/introvisual-editor.git 
 	ignore = untracked
 [submodule "supatches/plugins/lsl"]
 	path = supatches/plugins/lsl
-	url = git@github.com:RenaudGervais/vvvv.lsl.git
+	url = https://github.com/RenaudGervais/vvvv.lsl.git
 	ignore = untracked
 [submodule "introvisual"]
 	path = introvisual
-	url = git@github.com:Introceptibles/introvisual.git
+	url = https://github.com/Introceptibles/introvisual.git
 	ignore = untracked
