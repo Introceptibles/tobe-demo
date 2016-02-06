@@ -37,6 +37,8 @@
    </PIN>
    <PIN pinname="Custom Source Signal" visible="1">
    </PIN>
+   <PIN pinname="Display Breathing Guide" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Tex" dstnodeid="52" dstpinname="Custom Texture" linkstyle="VHV">
    <LINKPOINT x="7530" y="9330">
@@ -54,6 +56,8 @@
    <PIN pinname="Layer 2 - Layers" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Read" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="matrices.mat">
    </PIN>
    </NODE>
    <LINK srcnodeid="52" srcpinname="Layer" dstnodeid="51" dstpinname="Layer 2 - Layers">
@@ -233,7 +237,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5730" top="1365" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="breathing">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="ECG">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Custom Source Signal|">
    </PIN>
@@ -257,7 +261,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6480" top="7230" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="localhost">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="10.204.4.191">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="192.168.1.1">
    </PIN>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\tobe-demo\supatches\FakeSignalGenerator.v4p" systemname="FakeSignalGenerator" filename="C:\vvvv\projects\tobe-demo\supatches\FakeSignalGenerator.v4p" locked="1" scrollx="15" scrolly="0">
-   <BOUNDS type="Window" left="-15945" top="12615" width="14130" height="10725">
+   <PATCH nodename="C:\vvvv\projects\tobe-demo\supatches\FakeSignalGenerator.v4p" systemname="FakeSignalGenerator" filename="C:\vvvv\projects\tobe-demo\supatches\FakeSignalGenerator.v4p" locked="0" scrollx="15" scrolly="0">
+   <BOUNDS type="Window" left="-17235" top="12735" width="14130" height="10725">
    </BOUNDS>
    <NODE systemname="LSLSendData (Value)" filename="..\..\..\contributions\plugins\lsl\bin\lsl.dll" nodename="LSLSendData (Value)" componentmode="Hidden" id="0" debug="0">
    <BOUNDS type="Node" left="2115" top="6255" width="7935" height="270">
