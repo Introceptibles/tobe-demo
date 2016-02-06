@@ -119,6 +119,8 @@
    </PIN>
    <BOUNDS type="Box" left="3450" top="4125">
    </BOUNDS>
+   <PIN pinname="Update Streams" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <NODE systemname="Create (Message Formular)" filename="%VVVV%\packs\message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Create (Message Formular)" componentmode="Hidden" id="13">
    <BOUNDS type="Node" left="705" top="5985" width="8700" height="270">

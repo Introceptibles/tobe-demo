@@ -85,7 +85,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2385" top="5025" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -97,7 +97,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Send Signals|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="54" dstpinname="Send Signals">
@@ -107,7 +107,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3495" top="5295" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -119,11 +119,13 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|LSL Enabled|">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="54" dstpinname="LSL Enabled">
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="57" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="4635" top="4380" width="885" height="720">
+   <BOUNDS type="Box" left="4635" top="4380" width="840" height="1605">
    </BOUNDS>
    <BOUNDS type="Node" left="4635" top="4380" width="0" height="0">
    </BOUNDS>
@@ -136,6 +138,8 @@
    <PIN pinname="Size" slicecount="1" values="30">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Current player|">
+   </PIN>
+   <PIN pinname="Style" slicecount="1" values="List">
    </PIN>
    </NODE>
    <LINK srcnodeid="57" srcpinname="Output Enum" dstnodeid="54" dstpinname="Current player">
