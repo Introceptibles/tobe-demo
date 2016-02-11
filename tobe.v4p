@@ -111,7 +111,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3495" top="5295" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -123,7 +123,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|LSL Enabled|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="54" dstpinname="LSL Enabled">
