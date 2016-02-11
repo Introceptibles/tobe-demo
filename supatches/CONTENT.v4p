@@ -169,13 +169,13 @@
    <NODE id="19" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
-   <BOUNDS type="Box" left="1140" top="8790" width="750" height="240">
+   <BOUNDS type="Box" left="1140" top="9690" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1140" top="8790" width="750" height="240">
+   <BOUNDS type="Node" left="1140" top="9690" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="19" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="5" srcpinname="Layer Out" dstnodeid="14" dstpinname="Layer">
    </LINK>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Texture SizeXY">
@@ -206,7 +206,7 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="900" top="2625" width="17445" height="10140">
+   <BOUNDS type="Window" left="750" top="1035" width="17445" height="11340">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -259,6 +259,8 @@
    </PIN>
    <PIN pinname="Display Guide" visible="1">
    </PIN>
+   <PIN pinname="Layer heart wave" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="23" srcpinname="Output Node" dstnodeid="27" dstpinname="Physio Signals">
    </LINK>
@@ -292,6 +294,8 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Use Editor Source|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="28" dstpinname="Switch">
@@ -369,5 +373,47 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="35" srcpinname="Color Output" dstnodeid="34" dstpinname="Color">
+   </LINK>
+   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="37">
+   <BOUNDS type="Node" left="8310" top="4665" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Layer heart wave" dstnodeid="37" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Switch" linkstyle="Bezier">
+   <LINKPOINT x="4530" y="2805">
+   </LINKPOINT>
+   <LINKPOINT x="8295" y="2805">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="1155" top="9075" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Layer Out" dstnodeid="19" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="38" dstpinname="Layer 2" linkstyle="VHV">
+   <LINKPOINT x="1200" y="8768">
+   </LINKPOINT>
+   <LINKPOINT x="1515" y="8768">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Output" dstnodeid="38" dstpinname="Layer 1" linkstyle="VHV">
+   <LINKPOINT x="8340" y="8940">
+   </LINKPOINT>
+   <LINKPOINT x="1365" y="8940">
+   </LINKPOINT>
    </LINK>
    </PATCH>

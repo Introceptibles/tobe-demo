@@ -27,7 +27,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="900" top="2625" width="17445" height="10140">
+   <BOUNDS type="Window" left="750" top="1035" width="17445" height="11340">
    </BOUNDS>
    <PIN pinname="Physio Signals" visible="1">
    </PIN>

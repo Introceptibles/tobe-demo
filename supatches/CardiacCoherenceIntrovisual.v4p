@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\tobe-demo\supatches\CardiacCoherenceIntrovisual.v4p" systemname="CardiacCoherenceIntrovisual" filename="C:\vvvv\projects\tobe-demo\supatches\CardiacCoherenceIntrovisual.v4p">
+   <PATCH nodename="C:\vvvv\projects\tobe-demo\supatches\CardiacCoherenceIntrovisual.v4p" systemname="CardiacCoherenceIntrovisual" filename="C:\vvvv\projects\tobe-demo\supatches\CardiacCoherenceIntrovisual.v4p" scrollx="0" scrolly="30">
    <BOUNDS type="Window" left="3270" top="3525" width="19395" height="11595">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -311,11 +311,61 @@
    </BOUNDS>
    <PIN pinname="Beat" visible="1">
    </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Debug" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="2" srcpinname="ECG" dstnodeid="17" dstpinname="Beat" linkstyle="VHV">
    <LINKPOINT x="2055" y="2858">
    </LINKPOINT>
    <LINKPOINT x="12915" y="2858">
    </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="18" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="12915" top="7200" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12915" top="7200" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layer heart wave|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Layer" dstnodeid="18" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="13395" top="3375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleY" visible="1">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1">
+   </PIN>
+   <PIN pinname="ScaleZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Transform Out" dstnodeid="17" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="20" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="14130" top="2550" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14130" top="2550" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="3">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="19" dstpinname="ScaleY">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="19" dstpinname="ScaleX">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="19" dstpinname="ScaleZ">
    </LINK>
    </PATCH>
