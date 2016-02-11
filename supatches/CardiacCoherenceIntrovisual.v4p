@@ -43,6 +43,8 @@
    </PIN>
    <PIN pinname="relaxation" visible="1">
    </PIN>
+   <PIN pinname="ECG" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Output Node" dstnodeid="2" dstpinname="Input">
    </LINK>
@@ -303,5 +305,17 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Display Guide">
+   </LINK>
+   <NODE systemname="heart-wave" filename="..\introvisual\sprites\heart-wave.v4p" nodename="..\introvisual\sprites\heart-wave.v4p" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="12915" top="4230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Beat" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="ECG" dstnodeid="17" dstpinname="Beat" linkstyle="VHV">
+   <LINKPOINT x="2055" y="2858">
+   </LINKPOINT>
+   <LINKPOINT x="12915" y="2858">
+   </LINKPOINT>
    </LINK>
    </PATCH>

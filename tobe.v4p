@@ -155,7 +155,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1740" top="8835" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -167,7 +167,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Use Editor Source|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="52" dstpinname="Use Editor Source">
@@ -261,7 +261,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6480" top="7230" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="10.204.4.191">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="193.50.110.129">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="192.168.1.1">
    </PIN>
