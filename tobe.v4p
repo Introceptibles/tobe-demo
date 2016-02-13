@@ -39,7 +39,7 @@
    </PIN>
    <PIN pinname="Custom Source Signal" visible="1">
    </PIN>
-   <PIN pinname="Display Breathing Guide" slicecount="1" values="0">
+   <PIN pinname="Display Breathing Guide" slicecount="1" values="0" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Tex" dstnodeid="52" dstpinname="Custom Texture" linkstyle="VHV">
@@ -113,7 +113,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3495" top="5295" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -125,7 +125,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|LSL Enabled|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="54" dstpinname="LSL Enabled">
@@ -157,7 +157,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1740" top="8835" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -169,7 +169,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Use Editor Source|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="52" dstpinname="Use Editor Source">
@@ -297,5 +297,27 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="66" srcpinname="frames per second" dstnodeid="67" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="68" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3000" top="9195" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3000" top="9195" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Display Breathing Guide|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="68" srcpinname="Y Output Value" dstnodeid="52" dstpinname="Display Breathing Guide">
    </LINK>
    </PATCH>
