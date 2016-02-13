@@ -39,7 +39,7 @@
    </PIN>
    <PIN pinname="Custom Source Signal" visible="1">
    </PIN>
-   <PIN pinname="Display Breathing Guide" slicecount="1" values="0" visible="1">
+   <PIN pinname="Display Breathing Guide" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Tex" dstnodeid="52" dstpinname="Custom Texture" linkstyle="VHV">
