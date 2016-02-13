@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\vvvv\projects\tobe-demo\tobe.v4p" systemname="tobe" filename="C:\vvvv\projects\introvisual-tobe\tobe.v4p" scrollx="0" scrolly="0" locked="1">
+   <PATCH nodename="C:\vvvv\projects\tobe-demo\tobe.v4p" systemname="tobe" filename="C:\vvvv\projects\introvisual-tobe\tobe.v4p" scrollx="0" scrolly="0" locked="0">
    <BOUNDS type="Window" left="0" top="-60" width="10455" height="13560">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -163,7 +163,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1740" top="8835" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -175,7 +175,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Use Editor Source|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="52" dstpinname="Use Editor Source">
@@ -331,7 +331,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5430" top="11520" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="10050" top="4305" width="10140" height="8460">
+   <BOUNDS type="Window" left="10050" top="4305" width="11760" height="8460">
    </BOUNDS>
    <PIN pinname="Animation" visible="1">
    </PIN>
@@ -339,9 +339,11 @@
    </PIN>
    <PIN pinname="Tex" visible="1">
    </PIN>
-   <PIN pinname="Save Texture" visible="1">
+   <PIN pinname="Save Texture" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Directory" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Animation Transforms" dstnodeid="69" dstpinname="Animation" linkstyle="VHV">
@@ -362,18 +364,12 @@
    <LINKPOINT x="6975" y="9968">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="0" srcpinname="Texture Received" dstnodeid="69" dstpinname="Save Texture" linkstyle="VHV">
-   <LINKPOINT x="8820" y="9960">
-   </LINKPOINT>
-   <LINKPOINT x="7725" y="9960">
-   </LINKPOINT>
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="70" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="8460" top="10635" width="1275" height="240">
+   <BOUNDS type="Box" left="7860" top="10635" width="1275" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8460" top="10635" width="0" height="0">
+   <BOUNDS type="Node" left="7860" top="10635" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="supatches\">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="log">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -385,5 +381,31 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="70" srcpinname="Output String" dstnodeid="69" dstpinname="Directory">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Texture Received" dstnodeid="69" dstpinname="Save Texture" linkstyle="VHV">
+   <LINKPOINT x="8820" y="9960">
+   </LINKPOINT>
+   <LINKPOINT x="7725" y="9960">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="71" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8775" top="11250" width="390" height="450">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8775" top="11250" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Y Output Value" dstnodeid="69" dstpinname="Enabled">
    </LINK>
    </PATCH>
