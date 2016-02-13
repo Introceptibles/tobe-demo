@@ -138,7 +138,7 @@
    </LINK>
    <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Rotate">
    </LINK>
-   <BOUNDS type="Window" left="5820" top="5130" width="13530" height="10500">
+   <BOUNDS type="Window" left="4950" top="2100" width="13530" height="10500">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -179,7 +179,7 @@
    </LINKPOINT>
    </LINK>
    <NODE systemname="Split (Message Formular)" filename="%VVVV%\packs\message\nodes\plugins\VVVV.Nodes.Messaging.dll" nodename="Split (Message Formular)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="1560" top="2880" width="100" height="100">
+   <BOUNDS type="Node" left="1560" top="2745" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Message Formular" slicecount="1" values="|Physio Signals|">
    </PIN>
@@ -209,9 +209,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Output Node" dstnodeid="13" dstpinname="Input" linkstyle="VHV">
-   <LINKPOINT x="2895" y="2550">
+   <LINKPOINT x="2895" y="2505">
    </LINKPOINT>
-   <LINKPOINT x="1590" y="2550">
+   <LINKPOINT x="1590" y="2460">
    </LINKPOINT>
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="14">
@@ -227,7 +227,7 @@
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
-   <PIN pinname="Input 4" visible="1">
+   <PIN pinname="Input 4" visible="1" slicecount="2" values="0.990423262119293,0">
    </PIN>
    <PIN pinname="Input 5" visible="1">
    </PIN>
@@ -265,8 +265,6 @@
    <LINK srcnodeid="13" srcpinname="eyePosXY" dstnodeid="14" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="13" srcpinname="ECG" dstnodeid="14" dstpinname="Input 3">
-   </LINK>
-   <LINK srcnodeid="13" srcpinname="breathing" dstnodeid="14" dstpinname="Input 4">
    </LINK>
    <LINK srcnodeid="13" srcpinname="arousal" dstnodeid="14" dstpinname="Input 5">
    </LINK>
@@ -306,12 +304,6 @@
    <LINKPOINT x="6855" y="3923">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="17" srcpinname="Transform Out" dstnodeid="0" dstpinname="Texture Transform" linkstyle="Bezier">
-   <LINKPOINT x="6390" y="5670">
-   </LINKPOINT>
-   <LINKPOINT x="7650" y="5670">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="AvoidNIL (Node)" filename="%VVVV%\lib\nodes\modules\Node\AvoidNIL (Node).v4p" nodename="AvoidNIL (Node)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="7875" top="3120" width="100" height="100">
    </BOUNDS>
@@ -321,6 +313,26 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="8" srcpinname="Output Node" dstnodeid="18" dstpinname="Input">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="2790" top="3165" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Index" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="breathing" dstnodeid="19" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="14" dstpinname="Input 4">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Transform Out" dstnodeid="0" dstpinname="Texture Transform" linkstyle="Bezier">
+   <LINKPOINT x="6390" y="5670">
+   </LINKPOINT>
+   <LINKPOINT x="7650" y="5670">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="18" srcpinname="Output" dstnodeid="16" dstpinname="Input">
    </LINK>

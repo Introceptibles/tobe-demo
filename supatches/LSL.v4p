@@ -151,7 +151,7 @@
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="ecg">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="2" values="-1,0">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="8.37360683677672E-051">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="29">
@@ -161,7 +161,7 @@
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="breathing">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="2" values="13645.748046875,0">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="12677.0966796875">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="30">
@@ -213,15 +213,13 @@
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="39">
-   <BOUNDS type="Node" left="2325" top="4035" width="100" height="100">
+   <BOUNDS type="Node" left="2325" top="2235" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="29" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="21" srcpinname="Last received 1" dstnodeid="39" dstpinname="Input">
    </LINK>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="40">
@@ -270,6 +268,102 @@
    </LINK>
    <LINK srcnodeid="37" srcpinname="Output" dstnodeid="43" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="28" dstpinname="Y Input Value">
+   <NODE systemname="Damper (Animation Jump)" nodename="Damper (Animation Jump)" componentmode="Hidden" id="45" filename="%VVVV%\lib\nodes\modules\Animation\Damper (Animation Jump).v4p">
+   <BOUNDS type="Node" left="1035" top="3975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Jump To Position" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Jump" visible="1">
+   </PIN>
+   <PIN pinname="Filter Time" slicecount="1" values="0.3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="45" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="45" srcpinname="Position Out" dstnodeid="28" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="45" dstpinname="Jump">
+   </LINK>
+   <NODE systemname="DynamicRemap" filename="DynamicRemap.v4p" componentmode="Hidden" id="47" nodename="DynamicRemap.v4p">
+   <BOUNDS type="Node" left="2325" top="3135" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2325" top="3135" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="3165" top="6720" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="History Size" visible="1">
+   </PIN>
+   <PIN pinname="Record History" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="47" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="48" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3180" top="2580" width="495" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3180" top="2580" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="900">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="47" dstpinname="History Size">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="49" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2730" top="2640" width="285" height="330">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2730" top="2640" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="49" srcpinname="Y Output Value" dstnodeid="47" dstpinname="Record History">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="50" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3795" top="2760" width="330" height="420">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3795" top="2760" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="50" srcpinname="Y Output Value" dstnodeid="47" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Output" dstnodeid="29" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

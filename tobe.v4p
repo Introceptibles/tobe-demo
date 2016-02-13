@@ -17,6 +17,8 @@
    </PIN>
    <PIN pinname="Animator IP Address" visible="1">
    </PIN>
+   <BOUNDS type="Window" left="1785" top="2460" width="15870" height="11040">
+   </BOUNDS>
    </NODE>
    <NODE systemname="CONTENT" filename="supatches\CONTENT.v4p" nodename="supatches\CONTENT.v4p" componentmode="Hidden" id="52">
    <BOUNDS type="Node" left="1095" top="10275" width="3900" height="270">
@@ -155,7 +157,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1740" top="8835" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -167,7 +169,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Use Editor Source|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="52" dstpinname="Use Editor Source">
@@ -237,7 +239,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5730" top="1365" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="ECG">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="breathing">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Custom Source Signal|">
    </PIN>
@@ -275,5 +277,25 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="64" srcpinname="Output String" dstnodeid="0" dstpinname="Animator IP Address">
+   </LINK>
+   <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="66">
+   <BOUNDS type="Node" left="4140" top="330" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="frames per second" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="67" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4155" top="810" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4155" top="810" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="66" srcpinname="frames per second" dstnodeid="67" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

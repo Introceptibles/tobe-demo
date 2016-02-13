@@ -225,7 +225,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="10110" top="2625" width="8100" height="5570">
    </BOUNDS>
-   <BOUNDS type="Window" left="5820" top="5130" width="13530" height="10500">
+   <BOUNDS type="Window" left="4950" top="2100" width="13530" height="10500">
    </BOUNDS>
    <PIN pinname="Texture Transform" visible="1">
    </PIN>
