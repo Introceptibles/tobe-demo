@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="C:\vvvv\projects\tobe-demo\tobe.v4p" systemname="tobe" filename="C:\vvvv\projects\introvisual-tobe\tobe.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="0" top="0" width="10455" height="16455">
+   <BOUNDS type="Window" left="0" top="-60" width="10455" height="13560">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -51,7 +51,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="6966" width="11170" height="9025">
    </BOUNDS>
-   <BOUNDS type="Window" left="13725" top="7485" width="11160" height="9015">
+   <BOUNDS type="Window" left="7665" top="1605" width="11160" height="9015">
    </BOUNDS>
    <PIN pinname="Layer 2 - Layers" slicecount="1" visible="1" values="||">
    </PIN>
@@ -111,7 +111,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3495" top="5295" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -123,7 +123,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|LSL Enabled|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="54" dstpinname="LSL Enabled">
@@ -155,7 +155,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1740" top="8835" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -167,7 +167,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Use Editor Source|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="52" dstpinname="Use Editor Source">
@@ -261,7 +261,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6480" top="7230" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="193.50.110.129">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="192.168.1.73">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="192.168.1.1">
    </PIN>

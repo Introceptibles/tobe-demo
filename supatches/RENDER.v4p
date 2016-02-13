@@ -62,12 +62,12 @@
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="FullScreen" id="4">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="4">
    <BOUNDS type="Node" left="9570" top="7035" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="9570" top="7035" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="31410" top="6645" width="6240" height="5085">
+   <BOUNDS type="Window" left="16080" top="0" width="6240" height="5085">
    </BOUNDS>
    <PIN pinname="Depth Buffer Mode" slicecount="1" values="Standard">
    </PIN>
@@ -89,7 +89,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1500" top="6990" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="13515" top="1035" width="6240" height="5085">
+   <BOUNDS type="Window" left="10365" top="0" width="6240" height="5085">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="Debug">
    </PIN>
@@ -292,7 +292,7 @@
    <LINKPOINT x="11010" y="5040">
    </LINKPOINT>
    </LINK>
-   <BOUNDS type="Window" left="13725" top="7485" width="11160" height="9015">
+   <BOUNDS type="Window" left="7665" top="1605" width="11160" height="9015">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
